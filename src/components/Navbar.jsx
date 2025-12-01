@@ -17,7 +17,7 @@ function Navbar({ expanded, setExpanded }) {
   return (
     <aside
       className={`
-        h-screen bg-primary-400 shadow-md p-6 z-40 fixed top-0 left-0
+        h-screen bg-white shadow-md p-6 z-40 fixed top-0 left-0
         transition-all duration-300 flex flex-col
         ${expanded ? "w-64" : "w-20"}
       `}
@@ -54,7 +54,9 @@ function Navbar({ expanded, setExpanded }) {
                 <span
                   className={`
                     transition-all duration-300 text-nowrap
-                    ${expanded ? "opacity-100" : "opacity-0 w-0 overflow-hidden"}
+                    ${
+                      expanded ? "opacity-100" : "opacity-0 w-0 overflow-hidden"
+                    }
                   `}
                 >
                   {item.label}
