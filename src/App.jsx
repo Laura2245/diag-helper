@@ -5,6 +5,7 @@ import Login from "./components/Login";
 import Dashboard from "./pages/Dashboard";
 import Cadastro from "./components/Cadastro";
 import CadastroPacientes from "./pages/CadastroPacientes";
+import CadastroUsuario from "./pages/CadastroUsuario";
 import VisualizarImagens from "./pages/VisualizarImagens";
 import GerarLaudo from "./pages/GerarLaudo";
 import Configuracoes from "./pages/Configuracoes";
@@ -23,6 +24,8 @@ function App() {
     <Routes>
       {/* Página sem layout */}
       <Route path="/" element={<Login />} />
+
+      <Route path="/Suporte" element={<Suporte />} />
 
       {/* Páginas com layout */}
       <Route
@@ -48,6 +51,14 @@ function App() {
         element={
           <MainLayout expanded={expanded} setExpanded={setExpanded}>
             <CadastroPacientes />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/CadastroUsuario"
+        element={
+          <MainLayout expanded={expanded} setExpanded={setExpanded}>
+            <CadastroUsuario />
           </MainLayout>
         }
       />
